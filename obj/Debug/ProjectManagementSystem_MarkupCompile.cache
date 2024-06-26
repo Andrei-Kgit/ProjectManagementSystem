@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Git\ProjectManagementSystem\App.xaml
-1219584333
+4163173222
 
-7-1594579035
+12-606633575
 13-1310406943
-MainWindow.xaml;
+AdminsWindow.xaml;MainWindow.xaml;RegistrationWindow.xaml;TasksWindow.xaml;
 
 False
 

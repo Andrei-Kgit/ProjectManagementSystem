@@ -15,6 +15,6 @@
 
     public enum AccountType
     {
-        User, Admin,
+        None, User, Admin
     }
 }

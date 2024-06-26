@@ -3,28 +3,48 @@
   "WorkspaceRootPath": "D:\\Git\\ProjectManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\adminswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:adminswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\adminswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:adminswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\scripts\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:scripts\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\taskswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:taskswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\taskswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:taskswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|D:\\Git\\ProjectManagementSystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\scripts\\registredusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:scripts\\registredusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|D:\\Git\\ProjectManagementSystem\\registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|D:\\Git\\ProjectManagementSystem\\scripts\\registredusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:scripts\\registredusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|d:\\git\\projectmanagementsystem\\registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|D:\\Git\\ProjectManagementSystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|D:\\Git\\ProjectManagementSystem\\scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7624DD-D80D-4641-A639-D9AA46A084D5}|ProjectManagementSystem.csproj|solutionrelative:scripts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +54,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminsWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\AdminsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminsWindow.xaml.cs",
+              "ToolTip": "D:\\Git\\ProjectManagementSystem\\AdminsWindow.xaml.cs",
+              "RelativeToolTip": "AdminsWindow.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACEAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T08:34:19.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminsWindow.xaml",
+              "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\AdminsWindow.xaml",
+              "RelativeDocumentMoniker": "AdminsWindow.xaml",
+              "ToolTip": "D:\\Git\\ProjectManagementSystem\\AdminsWindow.xaml",
+              "RelativeToolTip": "AdminsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-26T07:55:44.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\Scripts\\TaskModel.cs",
+              "RelativeDocumentMoniker": "Scripts\\TaskModel.cs",
+              "ToolTip": "D:\\Git\\ProjectManagementSystem\\Scripts\\TaskModel.cs",
+              "RelativeToolTip": "Scripts\\TaskModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T08:28:37.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TasksWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\TasksWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TasksWindow.xaml.cs",
+              "ToolTip": "D:\\Git\\ProjectManagementSystem\\TasksWindow.xaml.cs",
+              "RelativeToolTip": "TasksWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T08:02:48.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TasksWindow.xaml",
+              "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\TasksWindow.xaml",
+              "RelativeDocumentMoniker": "TasksWindow.xaml",
+              "ToolTip": "D:\\Git\\ProjectManagementSystem\\TasksWindow.xaml",
+              "RelativeToolTip": "TasksWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-26T07:48:16.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "RegistrationWindow.xaml.cs",
               "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\RegistrationWindow.xaml.cs",
               "RelativeDocumentMoniker": "RegistrationWindow.xaml.cs",
               "ToolTip": "D:\\Git\\ProjectManagementSystem\\RegistrationWindow.xaml.cs",
               "RelativeToolTip": "RegistrationWindow.xaml.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAiwDsAAAAjAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAmwB4AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T06:51:34.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RegistrationWindow.xaml",
               "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\RegistrationWindow.xaml",
               "RelativeDocumentMoniker": "RegistrationWindow.xaml",
@@ -63,46 +146,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\Scripts\\User.cs",
               "RelativeDocumentMoniker": "Scripts\\User.cs",
               "ToolTip": "D:\\Git\\ProjectManagementSystem\\Scripts\\User.cs",
               "RelativeToolTip": "Scripts\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T06:13:23.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "RegistredUsers.cs",
               "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\Scripts\\RegistredUsers.cs",
               "RelativeDocumentMoniker": "Scripts\\RegistredUsers.cs",
               "ToolTip": "D:\\Git\\ProjectManagementSystem\\Scripts\\RegistredUsers.cs",
               "RelativeToolTip": "Scripts\\RegistredUsers.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACkAAAAZAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAA2wCkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T06:12:30.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Git\\ProjectManagementSystem\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAwBQAAAAIAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAqwCkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T19:29:40.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Git\\ProjectManagementSystem\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",

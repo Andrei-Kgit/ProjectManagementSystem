@@ -1,6 +1,7 @@
 ﻿using ProjectManagementSystem.Scripts;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,29 +26,37 @@ namespace ProjectManagementSystem
             InitializeComponent();
         }
 
+        private void ToRegistration(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+            registrationWindow.Show();
+            Hide();
+        }
+
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
             string login = LoginTextBox.Text.Trim();
             string password = PasswordTextBox.Password.Trim();
-
-            if(_registredUsers.AuthUser(login, password))
+            string userName;
+            switch (_registredUsers.AuthUser(login, password, out userName))
             {
-
+                case AccountType.None:
+                    MessageBox.Show("Введен неправильный логин или пароль");
+                    break;
+                case AccountType.User:
+                    TasksWindow tasksWindow = new TasksWindow(userName);
+                    tasksWindow.Show();
+                    Hide();
+                    break;
+                case AccountType.Admin:
+                    AdminsWindow adminsWindow = new AdminsWindow();
+                    adminsWindow.Show();
+                    Hide();
+                    break;
+                default:
+                    MessageBox.Show("Введен неправильный логин или пароль");
+                    break;
             }
-            else
-            {
-                MessageBox.Show("Введен неправильный логин или пароль");
-            }
-        }
-
-        private void ShowTasksWindow(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ToRegistration(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("reg");
         }
     }
 }

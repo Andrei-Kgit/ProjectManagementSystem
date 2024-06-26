@@ -24,6 +24,13 @@ namespace ProjectManagementSystem
             InitializeComponent();
         }
 
+        private void ToAuth(object sender, RoutedEventArgs e)
+        {
+            MainWindow authWindow = new MainWindow();
+            authWindow.Show();
+            Hide();
+        }
+
         private void Registration(object sender, RoutedEventArgs e)
         {
             bool loginIsValid = false;

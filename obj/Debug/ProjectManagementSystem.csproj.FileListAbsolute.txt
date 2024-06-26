@@ -13,3 +13,9 @@ D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.csproj.Generate
 D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.csproj.CoreCompileInputs.cache
 D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.exe
 D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.pdb
+D:\Git\ProjectManagementSystem\obj\Debug\RegistrationWindow.g.cs
+D:\Git\ProjectManagementSystem\obj\Debug\RegistrationWindow.baml
+D:\Git\ProjectManagementSystem\obj\Debug\TasksWindow.g.cs
+D:\Git\ProjectManagementSystem\obj\Debug\TasksWindow.baml
+D:\Git\ProjectManagementSystem\obj\Debug\AdminsWindow.g.cs
+D:\Git\ProjectManagementSystem\obj\Debug\AdminsWindow.baml

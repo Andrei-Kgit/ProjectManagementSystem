@@ -14,8 +14,7 @@ namespace ProjectManagementSystem.Scripts
 
         public bool RegUser(string login, string password, AccountType accountType = AccountType.User)
         {
-            if (!CheckUserRegistred(ADMINSNAME))
-                _users.Add(new User(ADMINSNAME, ADMINSNAME, AccountType.Admin));
+            RegAdmin();
 
             if (!CheckUserRegistred(login))
             {
@@ -28,18 +27,23 @@ namespace ProjectManagementSystem.Scripts
             }
         }
 
-        public bool AuthUser(string login, string password)
+        public AccountType AuthUser(string login, string password, out string userName)
         {
-            if(!CheckUserRegistred(login))
-                return false;
+            userName = string.Empty;
+            RegAdmin();
+            if (!CheckUserRegistred(login))
+                return AccountType.None;
 
             foreach(var user in _users)
             {
                 if(user.Login == login)
                     if(user.Password == password)
-                        return true;
+                    {
+                        userName = user.Login;
+                        return user.AccountType;
+                    }
             }
-            return false;
+            return AccountType.None;
         }
 
         private bool CheckUserRegistred(string login)
@@ -50,6 +54,12 @@ namespace ProjectManagementSystem.Scripts
                     return true;
             }
             return false;
+        }
+
+        private void RegAdmin()
+        {
+            if (!CheckUserRegistred(ADMINSNAME))
+                _users.Add(new User(ADMINSNAME, ADMINSNAME, AccountType.Admin));
         }
     }
 }
