@@ -26,7 +26,7 @@ namespace ProjectManagementSystem
             InitializeComponent();
         }
 
-        private void ToRegistration(object sender, RoutedEventArgs e)
+        private void ToRegistrationButtonClick(object sender, RoutedEventArgs e)
         {
             RegistrationWindow registrationWindow = new RegistrationWindow();
             registrationWindow.Show();
@@ -49,7 +49,7 @@ namespace ProjectManagementSystem
                     Hide();
                     break;
                 case AccountType.Admin:
-                    AdminsWindow adminsWindow = new AdminsWindow();
+                    AdminsWindow adminsWindow = new AdminsWindow(userName);
                     adminsWindow.Show();
                     Hide();
                     break;

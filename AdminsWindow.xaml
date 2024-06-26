@@ -1,19 +1,52 @@
 ﻿<Window x:Class="ProjectManagementSystem.AdminsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectManagementSystem"
-        mc:Ignorable="d"
+        xmlns:scripts="clr-namespace:ProjectManagementSystem.Scripts"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="AdminsWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="enumData" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="scripts:TaskState"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+
     <Grid>
-        <DataGrid x:Name="TaskGrid" Margin="5 20" FontSize="12" FontWeight="Bold" AutoGenerateColumns="False">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" MaxHeight="30" Margin="5">
+            <TextBlock x:Name="UserNameTextBox" VerticalAlignment="Center" Margin="10 0"></TextBlock>
+            <Button VerticalAlignment="Top" MinWidth="50" MinHeight="25" Click="ExitClickButton">
+                Выйти из аккаунта
+            </Button>
+        </StackPanel>
+
+        <DataGrid x:Name="TaskGrid" Margin="5 40 5 50" FontSize="12" FontWeight="Bold" AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=ProjectID}" Header="ID проекта"/>
                 <DataGridTextColumn Binding="{Binding Path=Name}" Header="Название"/>
                 <DataGridTextColumn Binding="{Binding Path=Discription}" Header="Описание"/>
                 <DataGridTextColumn Binding="{Binding Path=Employee}" Header="Ответственный"/>
+                <DataGridComboBoxColumn ItemsSource="{Binding Source={StaticResource enumData}, UpdateSourceTrigger=PropertyChanged}" SelectedItemBinding="{Binding State}" Header="Состояние"/>
+                <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Command="Delete"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="10">
+            <Button Margin="10 0" MaxHeight="30" VerticalAlignment="Bottom" Click="AddRowButtonClick">Добавить задачу</Button>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Orientation="Horizontal" Margin="10">
+            <Button Margin="10 0" MaxHeight="30" VerticalAlignment="Bottom" Click="RegEmployeeButtonClick">Зарегистрировать работника</Button>
+        </StackPanel>
+
     </Grid>
 </Window>

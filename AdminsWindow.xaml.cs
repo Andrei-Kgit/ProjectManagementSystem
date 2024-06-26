@@ -18,22 +18,74 @@ namespace ProjectManagementSystem
 {
     public partial class AdminsWindow : Window
     {
+        private readonly string _pathToFile = $"{Environment.CurrentDirectory}\\tasks.json";
         private BindingList<TaskModel> _tasks;
+        private ListSaveSystem<TaskModel> _saveSystem;
 
-        public AdminsWindow()
+        public AdminsWindow(string login)
         {
             InitializeComponent();
+            UserNameTextBox.Text = login;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            _tasks = new BindingList<TaskModel>()
+            _saveSystem = new ListSaveSystem<TaskModel>(_pathToFile);
+
+            try
             {
-                new TaskModel("P1", "task 1","need to do task1","Bob"),
-                new TaskModel("P1", "task 2","need to do task2","Tom"),
-                new TaskModel("P2", "task 1","need to do task1","Dom"),
-            };
+                _tasks = _saveSystem.LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
+
             TaskGrid.ItemsSource = _tasks;
+            _tasks.ListChanged += TasksListChanged;
+        }
+
+        private void TasksListChanged(object sender, ListChangedEventArgs e)
+        {
+            try
+            {
+                _saveSystem.SaveData(sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
+
+            //если нужны специфические ивенты
+            //switch (e.ListChangedType)
+            //{
+            //    case ListChangedType.ItemAdded:
+            //    case ListChangedType.ItemDeleted:
+            //    case ListChangedType.ItemChanged:
+            //        break;
+            //    default:
+            //        break;
+            //}
+        }
+
+        private void AddRowButtonClick(object sender, RoutedEventArgs e)
+        {
+            _tasks.Add(new TaskModel());
+        }
+
+        private void RegEmployeeButtonClick(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+            registrationWindow.Show();
+        }
+
+        private void ExitClickButton(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
         }
     }
 }

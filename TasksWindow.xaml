@@ -4,10 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectManagementSystem"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="TasksWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="UserNameTextBox" Text="User" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="12" MaxWidth="200"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" MaxHeight="30" Margin="5">
+            <TextBlock x:Name="UserNameTextBox" VerticalAlignment="Center" Margin="10 0"></TextBlock>
+            <Button VerticalAlignment="Top" MinWidth="50" MinHeight="25" Click="ExitButtonClick">
+                Выйти из аккаунта
+            </Button>
+        </StackPanel>
+        
         <DataGrid x:Name="TaskGrid" Margin="5 20">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ProjectID"/>

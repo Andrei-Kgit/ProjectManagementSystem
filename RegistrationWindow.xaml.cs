@@ -17,21 +17,21 @@ namespace ProjectManagementSystem
 {
     public partial class RegistrationWindow : Window
     {
+        private readonly string _pathToFile = $"{Environment.CurrentDirectory}\\registedUsers.json";
         private RegistredUsers _registredUsers = RegistredUsers.GetInstance();
+        private ListSaveSystem<User> _saveSystem;
 
         public RegistrationWindow()
         {
             InitializeComponent();
         }
 
-        private void ToAuth(object sender, RoutedEventArgs e)
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
         {
-            MainWindow authWindow = new MainWindow();
-            authWindow.Show();
             Hide();
         }
 
-        private void Registration(object sender, RoutedEventArgs e)
+        private void RegistrationButtonClick(object sender, RoutedEventArgs e)
         {
             bool loginIsValid = false;
             bool passIsValid = false;
@@ -67,6 +67,7 @@ namespace ProjectManagementSystem
                 if (_registredUsers.RegUser(login, password))
                 {
                     MessageBox.Show("Успешно");
+                    Hide();
                 }
                 else
                 {

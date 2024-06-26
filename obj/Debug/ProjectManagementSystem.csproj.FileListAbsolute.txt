@@ -19,3 +19,6 @@ D:\Git\ProjectManagementSystem\obj\Debug\TasksWindow.g.cs
 D:\Git\ProjectManagementSystem\obj\Debug\TasksWindow.baml
 D:\Git\ProjectManagementSystem\obj\Debug\AdminsWindow.g.cs
 D:\Git\ProjectManagementSystem\obj\Debug\AdminsWindow.baml
+D:\Git\ProjectManagementSystem\bin\Debug\Newtonsoft.Json.dll
+D:\Git\ProjectManagementSystem\bin\Debug\Newtonsoft.Json.xml
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectM.457DAF1E.Up2Date

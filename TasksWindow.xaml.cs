@@ -23,5 +23,12 @@ namespace ProjectManagementSystem
             UserName = login;
             UserNameTextBox.Text = UserName;
         }
+
+        private void ExitButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
+        }
     }
 }

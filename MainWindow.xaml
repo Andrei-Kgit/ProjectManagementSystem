@@ -4,25 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectManagementSystem"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid Background="LightGray">
-        <TextBlock Text="Логин и пароль админа: Admin Admin"/>
+        <TextBlock Text="Логин и пароль админа: admin   admin"/>
         <Border MinWidth="400" MaxWidth="500" Background="White" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="15" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="Добро пожаловать" FontSize="26"/>
-                
+
                 <TextBlock Text="Логин" Margin="0 15 0 0"/>
                 <TextBox x:Name="LoginTextBox"  Margin="0 5 0 0"/>
-                
+
                 <TextBlock Text="Пароль" Margin="0 15 0 0"/>
                 <PasswordBox x:Name="PasswordTextBox" Margin="0 5 0 0"/>
 
                 <Button Content="Вход" Margin="0 10 0 10" Height="30" Click="LoginButtonClick"/>
-                <Button Content="Регистрация" Margin="20 2 20 2" Click="ToRegistration"/>
+                <!--<Button Content="Регистрация" Margin="20 2 20 2" Click="ToRegistrationButtonClick"/>-->
             </StackPanel>
         </Border>
     </Grid>
