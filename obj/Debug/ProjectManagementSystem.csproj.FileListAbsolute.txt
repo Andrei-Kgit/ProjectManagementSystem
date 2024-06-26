@@ -1,0 +1,15 @@
+D:\Git\ProjectManagementSystem\bin\Debug\ProjectManagementSystem.exe.config
+D:\Git\ProjectManagementSystem\bin\Debug\ProjectManagementSystem.exe
+D:\Git\ProjectManagementSystem\bin\Debug\ProjectManagementSystem.pdb
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.csproj.AssemblyReference.cache
+D:\Git\ProjectManagementSystem\obj\Debug\MainWindow.g.cs
+D:\Git\ProjectManagementSystem\obj\Debug\App.g.cs
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem_MarkupCompile.cache
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem_MarkupCompile.lref
+D:\Git\ProjectManagementSystem\obj\Debug\MainWindow.baml
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.g.resources
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.Properties.Resources.resources
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.csproj.GenerateResource.cache
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.csproj.CoreCompileInputs.cache
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.exe
+D:\Git\ProjectManagementSystem\obj\Debug\ProjectManagementSystem.pdb
