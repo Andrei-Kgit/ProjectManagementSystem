@@ -1,10 +1,6 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace ProjectManagementSystem.Scripts
@@ -15,6 +11,7 @@ namespace ProjectManagementSystem.Scripts
         private readonly string _pathToFile = $"{Environment.CurrentDirectory}\\registedUsers.json";
         private ListSaveSystem<User> _saveSystem;
         private BindingList<User> _users = new BindingList<User>();
+        public List<string> UserNames { get; set; } = new List<string>();
 
         public RegistredUsers()
         {
@@ -26,6 +23,22 @@ namespace ProjectManagementSystem.Scripts
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+
+            FillUserNames();
+        }
+
+        private void FillUserNames()
+        {
+            if (_users != null)
+            {
+                UserNames = new List<string>();
+                foreach (var user in _users)
+                {
+                    if (user.Login != ADMINSNAME)
+                        UserNames.Add(user.Login);
+                }
+                UserNames.Sort();
             }
         }
 
@@ -46,7 +59,7 @@ namespace ProjectManagementSystem.Scripts
                 {
                     MessageBox.Show(ex.Message);
                 }
-
+                FillUserNames();
                 return true;
             }
             else
@@ -72,6 +85,39 @@ namespace ProjectManagementSystem.Scripts
                     }
             }
             return AccountType.None;
+        }
+
+        public bool DelUser(string login)
+        {
+            if (login == ADMINSNAME)
+                return false;
+
+            if (CheckUserRegistred(login))
+            {
+                foreach (var user in _users)
+                {
+                    if (user.Login == login)
+                    {
+                        _users.Remove(user);
+                        break;
+                    }
+                }
+
+                try
+                {
+                    _saveSystem.SaveData(_users);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                FillUserNames();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private bool CheckUserRegistred(string login)

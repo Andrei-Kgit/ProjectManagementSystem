@@ -1,11 +1,22 @@
 ﻿<Window x:Class="ProjectManagementSystem.TasksWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectManagementSystem"
+        xmlns:scripts="clr-namespace:ProjectManagementSystem.Scripts"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="TasksWindow" Height="450" Width="800">
+        Title="TasksWindow" Height="450" Width="800" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="enumData" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="scripts:TaskState"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" MaxHeight="30" Margin="5">
             <TextBlock x:Name="UserNameTextBox" VerticalAlignment="Center" Margin="10 0"></TextBlock>
@@ -13,13 +24,15 @@
                 Выйти из аккаунта
             </Button>
         </StackPanel>
-        
-        <DataGrid x:Name="TaskGrid" Margin="5 20">
+
+        <DataGrid x:Name="TaskGrid" Margin="5 40 5 50" FontSize="12" FontWeight="Bold" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ProjectID"/>
-                <DataGridTextColumn Header="TaskName"/>
-                <DataGridTextColumn Header="Description"/>
-                <DataGridComboBoxColumn Header="TaskState"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=ProjectID}" Header="ID проекта"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=Name}" Header="Название"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=Discription}" Header="Описание"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=Employee}" Header="Ответственный"/>
+                <DataGridComboBoxColumn ItemsSource="{Binding Source={StaticResource enumData}, UpdateSourceTrigger=PropertyChanged}" SelectedItemBinding="{Binding State}" Header="Состояние"/>
+
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

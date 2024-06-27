@@ -1,18 +1,7 @@
 ﻿using ProjectManagementSystem.Scripts;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ProjectManagementSystem
 {
@@ -21,6 +10,8 @@ namespace ProjectManagementSystem
         private readonly string _pathToFile = $"{Environment.CurrentDirectory}\\tasks.json";
         private BindingList<TaskModel> _tasks;
         private ListSaveSystem<TaskModel> _saveSystem;
+        private RegistrationWindow _registrationWindow = new RegistrationWindow();
+        private RegistredUsers _registredUsers = RegistredUsers.GetInstance();
 
         public AdminsWindow(string login)
         {
@@ -44,6 +35,15 @@ namespace ProjectManagementSystem
 
             TaskGrid.ItemsSource = _tasks;
             _tasks.ListChanged += TasksListChanged;
+            RefreshDataGridItems();
+            _registrationWindow.OnRegisterComplete += RefreshDataGridItems;
+        }
+
+        private void RefreshDataGridItems()
+        {
+            EmployeeComboBox.ItemsSource = _registredUsers.UserNames;
+            EmployeeToDelete.ItemsSource = _registredUsers.UserNames;
+            EmployeeToDelete.Text = "Выберите логин";
         }
 
         private void TasksListChanged(object sender, ListChangedEventArgs e)
@@ -77,8 +77,8 @@ namespace ProjectManagementSystem
 
         private void RegEmployeeButtonClick(object sender, RoutedEventArgs e)
         {
-            RegistrationWindow registrationWindow = new RegistrationWindow();
-            registrationWindow.Show();
+
+            _registrationWindow.Show();
         }
 
         private void ExitClickButton(object sender, RoutedEventArgs e)
@@ -86,6 +86,32 @@ namespace ProjectManagementSystem
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             Hide();
+        }
+
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
+        {
+            _registrationWindow.OnRegisterComplete -= RefreshDataGridItems;
+        }
+
+        private void DeleteEmployee(object sender, RoutedEventArgs e)
+        {
+            if (EmployeeToDelete.SelectedValue != null)
+            {
+                string login = EmployeeToDelete.SelectedValue as string;
+                if (_registredUsers.DelUser(login))
+                {
+                    MessageBox.Show("Аккаунт удален!");
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка при удалении!");
+                }
+                RefreshDataGridItems();
+            }
+            else
+            {
+                MessageBox.Show("Работник не выбран!");
+            }
         }
     }
 }

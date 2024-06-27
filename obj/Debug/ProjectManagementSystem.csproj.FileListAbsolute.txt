@@ -22,3 +22,4 @@ D:\Git\ProjectManagementSystem\obj\Debug\AdminsWindow.baml
 D:\Git\ProjectManagementSystem\bin\Debug\Newtonsoft.Json.dll
 D:\Git\ProjectManagementSystem\bin\Debug\Newtonsoft.Json.xml
 D:\Git\ProjectManagementSystem\obj\Debug\ProjectM.457DAF1E.Up2Date
+D:\Git\ProjectManagementSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs

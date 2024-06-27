@@ -1,22 +1,14 @@
 ﻿using ProjectManagementSystem.Scripts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace ProjectManagementSystem
 {
     public partial class RegistrationWindow : Window
     {
+        public event Action OnRegisterComplete;
         private readonly string _pathToFile = $"{Environment.CurrentDirectory}\\registedUsers.json";
         private RegistredUsers _registredUsers = RegistredUsers.GetInstance();
         private ListSaveSystem<User> _saveSystem;
@@ -37,10 +29,13 @@ namespace ProjectManagementSystem
             bool passIsValid = false;
             string login = LoginTextBox.Text.Trim();
             string password = PasswordTextBox.Password.Trim();
-            //TODO изменить проверки через регулярные
-            if (login.Length < 6)
+
+            Regex validateLogin = new Regex(@"^(?=.*?[a-z]).{5,}$");
+            Regex validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{5,}$");
+
+            if (!validateLogin.IsMatch(login))
             {
-                LoginTextBox.ToolTip = "Логин должен содержать больше 5 символов";
+                LoginTextBox.ToolTip = "Логин должен содержать минимум 5 символов, включая буквы a-z";
                 LoginTextBox.BorderBrush = Brushes.Red;
                 loginIsValid = false;
             }
@@ -50,9 +45,9 @@ namespace ProjectManagementSystem
                 loginIsValid = true;
             }
 
-            if (password.Length < 6)
+            if (!validatePassword.IsMatch(password))
             {
-                PasswordTextBox.ToolTip = "Пароль должен содержать больше 5 символов";
+                PasswordTextBox.ToolTip = "Пароль должен содержать минимум 5 символов, включая символы a-z, A-Z, 0-9, #?!@$%^&*-";
                 PasswordTextBox.BorderBrush = Brushes.Red;
                 passIsValid = false;
             }
@@ -67,6 +62,7 @@ namespace ProjectManagementSystem
                 if (_registredUsers.RegUser(login, password))
                 {
                     MessageBox.Show("Успешно");
+                    OnRegisterComplete?.Invoke();
                     Hide();
                 }
                 else

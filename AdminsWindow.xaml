@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:ProjectManagementSystem"
         xmlns:scripts="clr-namespace:ProjectManagementSystem.Scripts"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="AdminsWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="AdminsWindow" Height="450" Width="800" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
 
     <Window.Resources>
         <ObjectDataProvider x:Key="enumData" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
@@ -15,9 +15,11 @@
                 <x:Type TypeName="scripts:TaskState"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
+        <scripts:RegistredUsers x:Key="ComboItems"/>
     </Window.Resources>
 
     <Grid>
+
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" MaxHeight="30" Margin="5">
             <TextBlock x:Name="UserNameTextBox" VerticalAlignment="Center" Margin="10 0"></TextBlock>
             <Button VerticalAlignment="Top" MinWidth="50" MinHeight="25" Click="ExitClickButton">
@@ -26,11 +28,15 @@
         </StackPanel>
 
         <DataGrid x:Name="TaskGrid" Margin="5 40 5 50" FontSize="12" FontWeight="Bold" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Resources>
+                
+            </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=ProjectID}" Header="ID проекта"/>
                 <DataGridTextColumn Binding="{Binding Path=Name}" Header="Название"/>
                 <DataGridTextColumn Binding="{Binding Path=Discription}" Header="Описание"/>
-                <DataGridTextColumn Binding="{Binding Path=Employee}" Header="Ответственный"/>
+                <!--<DataGridTextColumn Binding="{Binding Path=Employee}" Header="Ответственный"/>-->
+                <DataGridComboBoxColumn x:Name="EmployeeComboBox" ItemsSource="{Binding Path=UserNames, Source={StaticResource ComboItems}}" SelectedItemBinding="{Binding Employee}" Header="Ответственный"/>
                 <DataGridComboBoxColumn ItemsSource="{Binding Source={StaticResource enumData}, UpdateSourceTrigger=PropertyChanged}" SelectedItemBinding="{Binding State}" Header="Состояние"/>
                 <DataGridTemplateColumn Header="Delete">
                     <DataGridTemplateColumn.CellTemplate>
@@ -46,6 +52,10 @@
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Orientation="Horizontal" Margin="10">
             <Button Margin="10 0" MaxHeight="30" VerticalAlignment="Bottom" Click="RegEmployeeButtonClick">Зарегистрировать работника</Button>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+            <ComboBox x:Name="EmployeeToDelete" MinWidth="100" ItemsSource="{Binding Path=UserNames, Source={StaticResource ComboItems}}" IsEditable="True" IsReadOnly="True" Text="Выберите логин"/>
+            <Button Margin="10 0" MaxHeight="30" VerticalAlignment="Bottom" Click="DeleteEmployee" >Удалить аккаунт работника</Button>
         </StackPanel>
 
     </Grid>
